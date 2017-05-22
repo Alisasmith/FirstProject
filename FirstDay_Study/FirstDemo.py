@@ -9,6 +9,7 @@
 @time: 2017/5/18 9:19
 @desc:
 '''
+import getpass
 # 键盘输入 raw_input()与input的区别
 # 注意：raw_input() 直接读取控制台的输入（任何类型的输入它都可以接收），
 #                  将所有输入作为字符串看待，返回字符串类型；
@@ -34,5 +35,39 @@
 # print (lista[0])
 
 # ===============================条件判断和循环==========================
-print ("请输入你的姓名:")
-name = raw_input()
+#
+age = 20
+# if age >= 6:
+#     print 'teenager'
+# elif age >= 18:
+#     print 'adult'
+# else:
+#     print 'kid'
+
+#===============================循环====================================
+# names = ['Lili', 'Alisa', 'Xiaoxiao']
+# for name in names:
+#     print name
+#==================================计算0-100之和========================
+# num = range(100)
+# sum = 0
+# for a in num:
+#     sum=sum+a
+# print sum
+
+#=================================得到0-100之间的奇数====================
+num = range(100)
+n = len(num)
+list_ou=[]
+list_dan=[]
+while n>0:
+    if (num[n-1] % 2) == 0:
+        list_ou.append(num[n-1])
+    else:
+        list_dan.append(num[n-1])
+    n=n-1
+print '偶数序列为：'+str(list_ou)
+print '奇数序列为：'+str(list_dan)
+
+
+
