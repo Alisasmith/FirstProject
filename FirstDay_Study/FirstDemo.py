@@ -69,5 +69,52 @@ while n>0:
 print '偶数序列为：'+str(list_ou)
 print '奇数序列为：'+str(list_dan)
 
+# ======================Dictionary=====================
+# 创建词典
+phone_book = {'Tom': 123, 'Alisa': 456, 'LiLi': 759}
+
+print ("Tom 的电话号码是："+str(phone_book['Tom']))
+# 修改字典里面的值
+phone_book['Tom'] = 963
+
+print ("Tom 的电话号码是："+str(phone_book['Tom']))
+
+# 想字典中添加元素
+phone_book['zmf'] = 182
+
+print ("zmf 的电话号码是："+str(phone_book['zmf']))
+
+# 删除字典中的某个元素
+del phone_book['zmf']
+print ("字典内容为："+str(phone_book))
+
+# 清除字典内容:将字典里的内容删掉，字典本身还存在
+phone_book.clear()
+print ("字典内容为："+str(phone_book))
+
+# 删除字典：字典以及内容都被删除
+del phone_book
+# print ("字典内容为："+str(phone_book))
+
+# 词典的特性 1）键值唯一，若同一个key值出现多次的话，会以最后一次的值为准
+#           2）key值不可变，可用数字、字符串、元组充当键，不能通过list
+
+# =====================function==def定义函数=======================
+# 有参数没有返回值
+def print_sum_two(a, b):
+    c = a + b
+    print ("a+b的值为："+str(c))
+print_sum_two(3, 6)
+
+# 有参数有返回值
+def repeat_str(str, times):
+    repeat_strs = str * times
+    return repeat_strs
+
+repeat_strings = repeat_str("Happy Birthday!", 4)
+print (repeat_strings)
+
+
+
 
 
