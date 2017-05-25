@@ -13,6 +13,8 @@
 import getpass
 import sys
 import json
+import math
+import os
 
 # 键盘输入 raw_input()与input的区别
 # 注意：raw_input() 直接读取控制台的输入（任何类型的输入它都可以接收），
@@ -157,7 +159,7 @@ a_dic = {"Name":"Tom", "age":'12', "sex":"男", "address":"北京市海淀区"}
 #     print str(dic_key).decode('utf-8'), str(dic_value).decode('utf-8')
     # print json.dumps(dic_key, encoding='utf-8', ensure_ascii=False), json.dumps(dic_value,encoding='utf-8',ensure_ascii=False)
 # ================while循环=======================
-number = 59
+# number = 59
 # guess_flag = False
 # while guess_flag == False:
 #     guess = int(input("Enter an number："))
@@ -186,7 +188,7 @@ number = 59
 #         print("No,the number is higher than that; you have "+ str(num_chances-guess_chances)+" 次机会"")
 # print ("Done")
 # ===================break.continue.pass==============
-number = 59
+# number = 59
 # while True:
 #     guess = int (input("Enter an integer:"))
 #     if guess == number:
@@ -200,16 +202,33 @@ number = 59
 # print ('Bingo!你猜对了')
 
 # =================pass，直接忽略当前，继续执行之后的内动
-a_list = [1,2,3]
-for i in a_list:
-    if 1 == i:
-        continue
-    print (i)
-print ('using pass')
-for i in a_list:
-    if 1 == i:
-        pass
-    print (i)
+# a_list = [1,2,3]
+# for i in a_list:
+#     if 1 == i:
+#         continue
+#     print (i)
+# print ('using pass')
+# for i in a_list:
+#     if 1 == i:
+#         pass
+#     print (i)
 
+# ====================函数定义def  键盘输入  计算任何数据的任何次方======================
+# print ("请输入底数:")
+# x = long (input())
+# print ("请输入指数:")
+# s = long (input())
+# # pow计算幂值
+# num = pow(x,s)
+# print x, '的', s, '次方为：',num
+
+# ==========================操作系统================================================
+# os.name 获取操作系统，如果是posix，说明系统是Linux、Unix或Mac OS X，如果是nt，就是Windows系统
+# 注意uname()函数在Windows上不提供，也就是说，os模块的某些函数是跟操作系统相关的。
+# 要获取某个环境变量的值，可以调用os.getenv()函数：
+# print os.name
+# print os.environ
+# print os.getenv('PATH')
+# print os.path.abspath('.')
 
 
