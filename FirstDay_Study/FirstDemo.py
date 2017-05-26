@@ -16,6 +16,10 @@ import json
 import math
 import os
 
+from Tkinter import *
+import tkMessageBox as tmb
+import tkSimpleDialog as tsd
+
 # 键盘输入 raw_input()与input的区别
 # 注意：raw_input() 直接读取控制台的输入（任何类型的输入它都可以接收），
 #                  将所有输入作为字符串看待，返回字符串类型；
@@ -230,5 +234,21 @@ a_dic = {"Name":"Tom", "age":'12', "sex":"男", "address":"北京市海淀区"}
 # print os.environ
 # print os.getenv('PATH')
 # print os.path.abspath('.')
+
+# =========================生成器==================================================
+root = Tk()
+
+print 'Enter an number:'
+max_input = int(input())
+def fib(max_input):
+    n, a, b = 0, 0, 1
+    while n < max_input:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+# fib()
+print str(max_input) + '的斐波那契数列为：'
+for n in fib(max_input):
+    print n
 
 

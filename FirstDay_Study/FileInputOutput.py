@@ -54,12 +54,12 @@ except ImportError:
 
 # ==================反序列化======================
 # pickle.load出现EOFError  EOFError一般是因为读到了空文件的时候出发，因此当load的时候catch一下这个异常
-f = open('dump.txt', 'rb')
-try:
-    print pickle.load(f)
-except:
-    print '没有内容'
-f.close()
+# f = open('dump.txt', 'rb')
+# try:
+#     print pickle.load(f)
+# except:
+#     print '没有内容'
+# f.close()
 
 
 
